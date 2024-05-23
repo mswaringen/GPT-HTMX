@@ -1,7 +1,7 @@
 # GPT-HTMX - AI Chatbot
 
 
-Proof of concept based on [this blog post](https://www.photondesigner.com/articles/chatgpt-htmx-django#full-online-demo-), with new features.
+Proof of concept based on [this blog post](https://www.photondesigner.com/articles/chatgpt-htmx-django), with new features.
 
 - Django
 - HTMX
@@ -11,6 +11,6 @@ Proof of concept based on [this blog post](https://www.photondesigner.com/articl
 
 URL: https://gpt-htmx.fly.dev/chat/
 
-### Screenshot
+## Screenshot
 
 ![screenshot](GPT-HTMX-screenshot.png)
