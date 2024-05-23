@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=fly_cookiecutter_django
+POSTGRES_USER=DEsLxQzqLgKSiwcBHexxSzQGKbNEDlJw
+POSTGRES_PASSWORD=WRecvXQQYIIPhxqCyPZ1JqnmLLARRRTdkKG76cX26UYMwQSvESfXyX1wfvtuOklZ
