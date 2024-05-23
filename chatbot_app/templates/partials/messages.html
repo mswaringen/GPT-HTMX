@@ -1,0 +1,36 @@
+<div id="chatbox">
+    {% for message in messages %}
+    <article><b>User:</b> {{ message.user_message }}</article>
+    <article><b>GPT:</b> {{ message.bot_message }}</article>
+    {% endfor %}
+</div>
+
+
+
+<form hx-post="{% url 'chat_view' %}" hx-target="#content" hx-swap="innerHTML" >
+    {% csrf_token %}
+    <progress class="custom-progress"></progress>
+    <fieldset role="group">
+        <input
+          type="text"
+          name="message"
+          placeholder="Enter message here"
+        />
+        <button type="submit">Send</button>
+        <button type="button" class="contrast" id="delete-button">Delete</button>
+      </fieldset>
+</form>
+
+<script>
+    document.getElementById('delete-button').addEventListener('click', function() {
+        var csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
+        var url = '{% url 'delete_message_view' %}';
+        htmx.ajax('DELETE', url, {
+            target: '#content',
+            swap: 'innerHTML',
+            headers: {
+                'X-CSRFToken': csrfToken
+            }
+        });
+    });
+</script>

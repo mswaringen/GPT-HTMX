@@ -15,7 +15,8 @@ urlpatterns = [
         TemplateView.as_view(template_name="pages/about.html"),
         name="about",
     ),
-    path("test-task/", test_views.test_task, name="test_task"), # NEW
+    path("test-task/", test_views.test_task, name="test_task"),
+    path('chat/', include('chatbot_app.urls')),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     # User management

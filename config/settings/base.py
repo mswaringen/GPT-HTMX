@@ -83,6 +83,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "fly_cookiecutter_django.users",
+    "chatbot_app"
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

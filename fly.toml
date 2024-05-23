@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for fly-cookiecutter-django-2 on 2024-05-21T17:21:43+01:00
+# fly.toml app configuration file generated for gpt-htmx on 2024-05-23T13:45:31+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'fly-cookiecutter-django-2'
+app = 'gpt-htmx'
 primary_region = 'mad'
 console_command = '/code/manage.py shell'
 
@@ -17,7 +17,6 @@ console_command = '/code/manage.py shell'
 
 [processes]
   app = 'python -m gunicorn --bind :8000 --workers 1 config.wsgi'
-  worker = 'python -m celery -A config.celery_app:app worker -l DEBUG'
 
 [http_service]
   internal_port = 8000
